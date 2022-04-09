@@ -2,7 +2,8 @@
 Cliente: Ana Klein Beauty
 Author: ITS Tecnologia Criativa
 Cores base:
-  Pantone color: #5E2751
+  Pantone color: #5E2751,
+  Sugestão de cinza: #D9D9D9 , #999999, #737373
 */
 /* Reset Geral*/
 *,
@@ -15,6 +16,11 @@ Cores base:
 # General
 --------------------------------------------------------------*/
 :root {
+
+  --cinza-base-claro: #D9D9D9;
+  --cinza-base-medio: #999999;
+  --cinza-base-escuro: #737373;
+
   --rgb667C: rgb(124, 105, 146);
   --hex667C: #7C6992;
 
@@ -23,6 +29,9 @@ Cores base:
 
   --rgb669C: rgb(63, 42, 86);
   --hex669C: #3F2A56;
+  
+  --rgb7652C: rgb(94, 39, 81);
+  --hex7652C: #5E2751;
 
   --rgb257C: rgb(198, 161, 207);
   --hex257C: #C6A1CF;
@@ -33,23 +42,22 @@ Cores base:
   --rgb5145C: rgb(155, 119, 147);
   --hex5145C: #9B7793;
 
-  --rgb7652C: rgb(94, 39, 81);
-  --hex7652C: #5E2751;
+  
 
   --rgb7680C: rgb(82, 49, 120);
   --hex7680C: #523178;
 }
 body {
-  background: var(--rgb257C);
+  background: var(--cinza-base-claro);
   color: var(--rgb7680C);
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  transition:  all 1s ease-in-out;
+  transition:  all .8s ease-in-out;
 }
 
 a {
   color: #5E2751;
-  transition: all 1s ease;
+  transition: all .9s ease;
 }
 
 a:visited,
@@ -69,6 +77,7 @@ a:active {
 p {
   padding: 0;
   margin: 0;
+  
 }
 
 h1,
@@ -107,14 +116,14 @@ h6 {
   z-index: 0;
 }
 .work .text {
-  padding: .4rem!important;
-  -webkit-background: rgba(198, 161, 207, .9);
-  -moz-background: rgba(198, 161, 207, .9);
-  background: rgba(198, 161, 207, .9);
+  padding: .1rem 1.1rem !important;
+  -webkit-background: var(--hex257C);
+  -moz-background: var(--hex257C);
+  background: var(--hex257C);
   width: auto!important;
-  height:fit-content!important;
+  height: fit-content!important;
   margin-left: .7rem!important;
-  margin-top: .7rem!important;
+  margin-top: .7rem !important;
   -webkit-border-top-right-radius: 20%;
   -webkit-border-bottom-left-radius: 20%;
   -moz-border-top-right-radius: 20%;
@@ -128,7 +137,7 @@ h6 {
 .owl-carousel {
   position: relative;
   margin-bottom: 30px!important;
-  transition:  all 1s ease-in-out;
+  transition:  all .9s ease-in-out;
 }
 
 .owl-carousel .owl-item {
@@ -145,7 +154,12 @@ h6 {
   width: 100%;
   
 }
-
+.owl-carousel .owl-item img {
+  display: block;
+  width: auto;
+  height: 70px;
+  margin: 0 auto;
+}
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next {
   position: absolute;
@@ -160,7 +174,7 @@ h6 {
   opacity: 1;
  
 }
-
+/* Analisar depois por erros de redundancia */
 @media (prefers-reduced-motion: reduce) {
 
   .owl-carousel .owl-nav .owl-prev,
@@ -233,19 +247,20 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
+/*------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: linear-gradient(45deg, #C6A1CF -25%, #523178 100%);
+  background: var(--cinza-base-claro);
+  border-bottom: var(--hex7680C) solid 1px;
   padding: .8rem 0;
-  font-size: 14px;
+  font-size: 12px;
   display: block !important;
   z-index: 70000;
 }
 
 #topbar .contact-info a {
-  color: #ffffff;
+  color: var(--hex7680C);
 }
 
 #topbar .contact-info a:hover {
@@ -253,23 +268,21 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: #fff;
+  color: var(--hex7680C);
   padding: 0;
-
 }
 
-.contact-info.float-left {
-  color: #fff;
-}
+
 
 #topbar .contact-info .fa-phone {
   padding-left: .73rem;
   margin-left: .5rem;
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid var(--hex7680C);
 }
 .sec-padding {
   padding-top: 1.1rem !important;
   padding-bottom: .9rem !important;
+  
 }
 /*--------------------------------------------------------------
 # Header
@@ -277,8 +290,7 @@ h6 {
 #header {
   padding-top: .5rem;
   height: 86px;
-  transition: all 1s ease-in-out;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 #header #logo img {
@@ -289,16 +301,17 @@ h6 {
 /*Componente ao redor do carousel*/
 #seletordeLojas {
   padding: 10px 0px 0px 0px!important;
-  height: auto!important;
+  height: auto !important;
   margin: 0 auto;
 }
 .ftco-section {
   padding: 0!important;
+  
 }
 /*Carousel Indicators*/
 .carousel-inner {
    padding: 0 !important; 
-   
+  
 }
 
 /*---Change Carousel Transition Speed --*/
@@ -313,58 +326,30 @@ h6 {
   max-width: 65px!important;
 }
 /*-- Carousel Content --*/
-.card {
-  /*border: blue dashed 1px;
-    box-shadow: .1rem .2rem .3rem rgba(0,0,0,.3);
-   RGBA color default rgba(151,202,0,.3); rgba(0,31,122,.3);*/
-  text-transform: uppercase;
-}
-.cardHead {
-  padding: 0;
-}
-.cardHead h1 {
-  line-height: normal;
-  font-size: 1.4rem;
-  padding: 0 !important;
-  color: #ffffff!important;
-}
-.cardHead p {
-  line-height: normal;
-  font-size: 1.1rem;
-  padding: 0 !important;
-  margin-bottom: .5rem;
-}
-.cardHead h1, p {
-  text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
-  padding: 0!important;
-}
-.card .card-img-overlay {  
-  margin-left: 4rem !important;
-  padding-left: 4rem!important;
-  
-}
+
 .card-title {
   font-size: 1.2rem !important;
-  font-weight: bold;
-  margin: 0 !important;
+  font-weight: normal;
+  text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
 }
 .card-text {
   font-size: 1.8rem !important;
   font-weight: bold;
   padding-left: 1rem;
   margin: 0 !important;
+  text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
 }
 .btn-primary {
-  background-color: #5E2751 !important;
-  padding: .2rem !important;
+  background-color: var(--hex2453C) !important;
   margin-left: .9rem;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 32px;
+  padding: 10px 20px;
   transition: all 0.5s ease-in-out;
   margin: 10px;
   border-radius: 5px 0 5px;
+  
 }
 
 .btn-primary:focus,
@@ -374,61 +359,60 @@ h6 {
 
 .btn-primary:hover {
   background: var(--hex7680C);
-  color: var(--hex257C) !important;
+  color: var(--hex7652C) !important;
+  border: var(--hex7680C);
   border-radius: 15px 15px 5% 5%;
+  box-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
 }
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #523178;
-  padding: 0 0 30px 0;
-  font-size: .7rem;
-  color: #fff;
+  background: var(--cinza-base-claro);
+  padding: 0 0 30px 0px;
+  margin-bottom: 30px;
+  font-size: .8rem;
+  color: var(--hex669C);
   max-height: 125px;
+  
 }
 
 #footer .copyright {
   text-align: center;
   padding-top: .5rem;
-  color: #ffffff;
-  
+  color: var(--hex7680C);
 }
 
 #footer .credits {
   text-align: center;
-  font-size: .5rem;
-  color: #ffffff;
+  font-size: .9rem;
   margin-top: 8px;
 }
 
 #footer .social-links a {
-  color: #B996C3;
+  color: var(--hex7680C);
   display: inline-block; 
   padding: .3rem .5rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem !important;
 }
 
 #footer .social-links a:hover {
-  color: #fcfcfc;  
+  color: var(--hex7680C);
+  text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
+  transform: scale(1px 5px); 
 }
 
-#footer .social-links a:first-child {
-  border-left: 0;
-}
+/* #footer .social-links a:first-child {
+  border-left: 1px solid var(--hex669C);
+} */
 #footer .credits a {
-  color: #C6A1CF;
+  color: var(--cinza-base-escuro);
 }
 #footer .credits a:hover {
-    color: #f7d5ef;
+    color: var(--hex7680C);
     text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
   }
-.owl-carousel .owl-item img {
-    display: block;
-    width: auto;
-    height: 70px;
-    margin: 0 auto;
-}
+
 /*--------------------------------------------------------------
 # Box de Publicidade Oculto
 --------------------------------------------------------------*/
@@ -517,13 +501,13 @@ h6 {
   }
   .card-title {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: normal;
     text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
      
   }
   .card-text {
     font-size: .7rem;
-    font-weight: normal;
+    font-weight: bold;
     text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
       
   }
@@ -578,30 +562,28 @@ h6 {
       line-height: normal;
       font-size: 1.7rem!important;
       padding: 0 !important;
+      text-shadow: .05rem .05rem .2rem rgba(0,0,0,.5);
     }
     .cardHead p {
       line-height: normal;
       font-size: 1.2rem!important;
       padding: 0 !important;
     }
-    .cardHead h1, p {
-      text-shadow: .05rem .05rem .2rem rgba(0,0,0,.5);
-      padding: 0!important;
-    }
+    
     .card .card-img-overlay {  
       margin-left: 4.1rem !important;
       padding: 0!important;  
     }
     .card-title {
       font-size: 2.2rem;
-      font-weight: bold;
+      font-weight: normal;
       text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
       padding-top: 1rem !important;
       margin-bottom: 0 !important;
     }
     .card-text {
       font-size: 2.5rem!important;
-      font-weight: normal;
+      font-weight: bold;
       text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
         
     }
