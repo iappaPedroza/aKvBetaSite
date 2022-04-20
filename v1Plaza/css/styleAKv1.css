@@ -7,7 +7,7 @@ color: #611759
 /*--------------------------------------------------------------
 # General
 ----------------------------------------------------------------*/
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 *,
 *::before,
 *::after {
@@ -61,7 +61,8 @@ body {
 
 a {
   color: #5E2751;
-  
+  transition: all .5s ease-in-out;
+  text-decoration: none;
 }
 
 a:visited,
@@ -72,7 +73,7 @@ a:focus {
 
 a:hover,
 a:active {
-  color: #5E2751;
+  
   outline: none !important;
   text-decoration: none !important;
   border: none !important;
@@ -119,8 +120,8 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: var(--hex7680C);
-  color: var(--hex257C);
+  background: var(--hex257C);
+  color: var(--hex7680C);
   outline: none;
 }
 
@@ -143,19 +144,20 @@ h6 {
   }
 }
 
-/*----------------------------------------------------------
+/*------------------------------------------------------------
 # Top Bar
-----------------------------------------------------------*/
+--------------------------------------------------------------*/
 #topbar {
-  background: linear-gradient(45deg, #C6A1CF -25%, #523178 100%);
+  background: var(--cinza-base-claro);
+  border-bottom: var(--hex7680C) solid 1px;
   padding: .8rem 0;
-  font-size: 14px;
+  font-size: 12px;
   display: block !important;
-  z-index: 40000;
+  z-index: 70000;
 }
 
 #topbar .contact-info a {
-  color: #ffffff;
+  color: var(--hex7680C);
 }
 
 #topbar .contact-info a:hover {
@@ -163,21 +165,17 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: #fff;
+  color: var(--hex7680C);
   padding: 0;
-
 }
 
-.contact-info.float-left {
-  color: #fff;
-}
 
-#topbar .contact-info .fa-phone {
+
+#topbar .contact-info .bi-telephone-fill {
   padding-left: .73rem;
   margin-left: .5rem;
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid var(--hex7680C);
 }
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -375,25 +373,26 @@ h6 {
 
 .work .text {
   padding: .7rem !important;
-  -webkit-background: rgba(198, 161, 207, .9);
-  -moz-background: rgba(198, 161, 207, .9);
-  background: rgba(198, 161, 207, .9);
+  -webkit-background: var(--cinza-base-claro);
+  -moz-background: var(--cinza-base-claro);
+  background: var(--cinza-base-claro);
   width: auto !important;
   height: fit-content !important;
   margin-left: .7rem !important;
   margin-top: .7rem !important;
   -webkit-border-top-right-radius: 10%;
-  -webkit-border-bottom-left-radius: 10%;
+  -webkit-border-bottom-left-radius: 15px;
   -moz-border-top-right-radius: 10%;
-  -moz-border-bottom-left-radius: 10%;
+  -moz-border-bottom-left-radius: 15px;
   border-top-right-radius: 10%;
-  border-bottom-left-radius: 10%;
+  border-bottom-left-radius: 15px;
   -moz-box-shadow: 0px 20px 10px -20px rgba(82, 49, 120, 0.50);
   -webkit-box-shadow: 0px 20px 10px -20px rgba(82, 49, 120, 0.50);
   box-shadow: 0px 20px 10px -10px rgba(82, 49, 120, 0.50);
 }
 .work .text .card-title {
-  padding: 0!important;
+  padding-top: 5px !important;
+  color: var(--hex7680C);
   font-size: 1rem !important;
   font-weight: bold;
   text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .5);
@@ -407,36 +406,7 @@ h6 {
   text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .5);
   text-overflow: wrap;
   line-height: 1.1rem !important;
-}
-
-.btn-primary {
-  background-color: #5E2751 !important;
-  padding: .2rem !important;
-  margin-left: .9rem;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 32px;
-  transition: all 0.7s ease;
-  margin: 10px;
-  border-radius: 5px 0 5px;
-}
-
-.btn-primary:focus,
-.btn-primary:active {
-  border: none !important;
-}
-
-.btn-primary:hover {
-  transition: transform 0.9s ease;
-  background-color: #C6A1CF !important;
-  color: #5E2751 !important;
-}
-
-li.menu-active a {
-  background: var(--hex7680C);
-  color: var(--hex257C) !important;
-  border-radius: 15px 15px 5% 5%;
+  padding-top: 10px !important;
 }
 
 /*--------------------------------------------------------------
@@ -467,7 +437,7 @@ li.menu-active a {
   float: left;
 }
 
-.nav-menu li:hover>ul,
+
 .nav-menu li.sfHover>ul {
   display: block;
 }
@@ -514,24 +484,26 @@ li.menu-active a {
 }
 
 /* Nav Meu Styling */
-.nav-menu a {
-  padding: 10px 16px;
-  text-decoration: none;
+.nav-menu a {  
+  padding: 10px 16px;  
   display: inline-block;
-  color: #523178 !important;
+  color: var(--hex668C)!important;
   font-weight: 700;
   font-size: 14px;
-  outline: none;
+  
+  border-radius: .9rem 0 .9rem 0 !important;
+  
 }
 
 .nav-menu a:hover {
-  background: #5E2751;
+  border: var(--cinza-base-escuro) solid 1px !important;
   border-radius: .9rem 0 .9rem 0 !important;
+  box-shadow: 7px 5px 5px 0px rgba(127, 137, 161, 0.25);
 }
 
-.nav-menu li:hover>a,
+
 .nav-menu>.menu-active>a {
-  color: #B996C3 !important;
+  color: var(--hex7680C)!important;
 }
 
 .nav-menu>li {
@@ -541,27 +513,17 @@ li.menu-active a {
 .nav-menu ul {
   margin: 4px 0 0 0;
   padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: rgba(82, 49, 120, 0.78);
-}
-
-.nav-menu ul li {
-  transition: all 0.7s ease;
+  
+  
 }
 
 .nav-menu ul li a {
   padding: 10px;
-  color: #5e275177 !important;
-  transition: all 0.7s ease;
   display: block;
   font-size: 13px;
   text-transform: none;
 }
 
-.nav-menu ul li:hover>a {
-  color: var(--hex257C);
-
-}
 
 .nav-menu ul ul {
   margin: 0;
