@@ -2,7 +2,7 @@
 Cliente: Ana Klein Beauty
 Author: ITS Tecnologia Criativa
 Cores base:
-  Pantone color: #5E2751,
+  Pantone color: #A64887,
   Sugestão de cinza: #D9D9D9 , #999999, #737373
 */
 /* Reset Geral*/
@@ -31,8 +31,8 @@ Cores base:
   --rgb669C: rgb(63, 42, 86);
   --hex669C: #3F2A56;
   
-  --rgb7652C: rgb(94, 39, 81);
-  --hex7652C: #5E2751;
+  --rgb7652C: rgb(166, 72,135);
+  --hex7652C: #A64887;
 
   --rgb257C: rgb(198, 161, 207);
   --hex257C: #C6A1CF;
@@ -50,14 +50,14 @@ Cores base:
 }
 body {
   background: var(--cinza-base-claro);
-  color: var(--rgb7680C);
+  color: var(--hex7652C);
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   transition:  all .8s ease-in-out;
 }
 
 a {
-  color: #5E2751;
+  color: #A64887;
   transition: all .9s ease;
   text-decoration: none;
 }
@@ -70,7 +70,7 @@ a:focus {
 
 a:hover,
 a:active {
-  color: #5E2751;
+  color: #A64887;
   outline: none !important;
   text-decoration: none !important;
   border: none !important;
@@ -255,7 +255,7 @@ h6 {
 --------------------------------------------------------------*/
 #topbar {
   background: var(--cinza-base-claro);
-  border-bottom: var(--hex7680C) solid 1px;
+  border-bottom: var(--hex7652C) solid 1px;
   padding: .8rem 0;
   font-size: 12px;
   display: block !important;
@@ -263,7 +263,7 @@ h6 {
 }
 
 #topbar .contact-info a {
-  color: var(--hex7680C);
+  color: var(--hex7652C);
 }
 
 #topbar .contact-info a:hover {
@@ -271,7 +271,7 @@ h6 {
 }
 
 #topbar .contact-info i {
-  color: var(--hex7680C);
+  color: var(--hex7652C);
   padding: 0;
 }
 
@@ -280,7 +280,7 @@ h6 {
 #topbar .contact-info .bi-telephone-fill {
   padding-left: .73rem;
   margin-left: .5rem;
-  border-left: 1px solid var(--hex7680C);
+  border-left: 1px solid var(--hex7652C);
 }
 .sec-padding {
   padding-top: 1.1rem !important;
@@ -322,10 +322,10 @@ h6 {
 .carousel-item-prev,
 .carousel-item.active {
   transition: transform 1s ease-in-out;
-  color: #5E2751!important;
+  color: #A64887!important;
 }
 .carousel-control-prev, .carousel-control-next {
-  color: #5E2751!important;
+  color: #A64887!important;
   max-width: 65px!important;
 }
 /*-- Carousel Content --*/
@@ -344,7 +344,7 @@ h6 {
 }
 .btn-primary {
   background-color: var(--cinza-base-claro) !important;
-  color: var(--hex7680C);
+  color: var(--hex7652C);
   margin-left: .9rem;
   font-size: 15px;
   letter-spacing: 1px;
@@ -363,8 +363,8 @@ h6 {
 }
 
 .btn-primary:hover {
-  color: var(--hex7680C);
-  border: var(--hex7680C) solid 1px!important;
+  color: var(--hex7652C);
+  border: var(--hex7652C) solid 1px!important;
   border-radius: 15px 15px 5% 5%;
   box-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
 }
@@ -384,7 +384,7 @@ h6 {
 #footer .copyright {
   text-align: center;
   padding-top: .5rem;
-  color: var(--hex7680C);
+  color: var(--hex7652C);
 }
 
 #footer .credits {
@@ -394,14 +394,14 @@ h6 {
 }
 
 #footer .social-links a {
-  color: var(--hex7680C);
+  color: var(--hex7652C);
   display: inline-block; 
   padding: .3rem .5rem;
   font-size: 1.8rem !important;
 }
 
 #footer .social-links a:hover {
-  color: var(--hex7680C);
+  color: var(--hex7652C);
   text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
   transform: scale(1px 5px); 
 }
@@ -413,7 +413,7 @@ h6 {
   color: var(--cinza-base-escuro);
 }
 #footer .credits a:hover {
-    color: var(--hex7680C);
+    color: var(--hex7652C);
     text-shadow: .1rem .1rem .2rem rgba(0,0,0,.5);
   }
 
@@ -436,12 +436,12 @@ h6 {
 }
 .titBemvindo .card h1 {
   font-size: 1.5rem!important;
-  color: #5E2751;
+  color: #A64887;
   line-height: 1.35rem!important;
 }
 .titBemvindo .card p {
   font-size: 1.3rem!important;
-  color: #5E2751;
+  color: #A64887;
   line-height: 1.25rem!important;
 }
 

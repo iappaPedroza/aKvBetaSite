@@ -2,7 +2,7 @@
 Cliente: Ana Klein Beauty
 Author: ITS Tecnologia Criativa
 Cor base
-color: #611759
+color: #A64887
 */
 /*--------------------------------------------------------------
 # General
@@ -34,8 +34,8 @@ color: #611759
   --rgb669C: rgb(63, 42, 86);
   --hex669C: #3F2A56;
   
-  --rgb7652C: rgb(94, 39, 81);
-  --hex7652C: #5E2751;
+  --rgb7652C: rgb(166, 72,135);
+  --hex7652C: #A64887;
 
   --rgb257C: rgb(198, 161, 207);
   --hex257C: #C6A1CF;
@@ -53,14 +53,14 @@ color: #611759
 }
 body {
   background: var(--cinza-base-claro);
-  color: var(--rgb7680C);
+  color: var(--hex7652C);
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   transition:  all .8s ease-in-out;
 }
 
 a {
-  color: #5E2751;
+  color: #A64887;
   transition: all .5s ease-in-out;
   text-decoration: none;
 }
@@ -92,6 +92,7 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  color: var(--hex7652C);
 }
 
 
@@ -120,18 +121,18 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: var(--hex257C);
-  color: var(--hex7680C);
+  background: var(--hex7680C);
+  color: var(--hex257C);
   outline: none;
 }
 
 .back-to-top:hover {
-  background: var(--hex669C);
-  color: var(--hex257C);
+  background: var(--hex257C);
+  color: var(--hex669C);
   -moz-box-shadow: 0 .3rem .3rem rgba(82, 49, 120, .5);
   -webkit-box-shadow: 0 .3rem .3rem rgba(82, 49, 120, .5);
   box-shadow: 0 .3rem .3rem rgba(82, 49, 120, .5);
-  border: var(--hex257C) solid 1px!important;
+  border: var(--hex669C) solid 1px!important;
 }
 
 @keyframes action {
@@ -660,7 +661,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-header h2 {
   font-size: 2rem !important;
-  color: var(--hex7680C);
+  /* color: var(--hex7680C); */
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
@@ -696,6 +697,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about {
   position: relative;
   overflow: hidden;
+  color: var(--hex7652C);
   /* background: #0b111f; */
 }
 
@@ -714,16 +716,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-
+#about h1 {
+  color: var(--hex7652C)!important;
+}
 #about .content h2 {
-  color: var(--hex669C);
+  color: var(--hex7652C);
   font-weight: 700;
   font-size: 1.1rem;
   padding-top: .4rem;
 }
 
 #about .content h3 {
-  color: var(--hex668C);
+  color: var(--hex7652C);
   font-weight: 600;
   font-size: 18px;
   line-height: normal;
@@ -951,7 +955,7 @@ section#services h2 {
   margin: 0;
   text-transform: capitalize;
   font-weight: 700;
-  background: #5e2751cb;
+  background: #A64887cb;
   padding: 25px;
   /* background: linear-gradient(45deg, #c802a057 0%, #405ece91 100%); */
 }
@@ -985,7 +989,7 @@ section#services h2 {
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
-  color: #5E2751;
+  color: #A64887;
   padding-bottom: 2rem !important;
 }
 
