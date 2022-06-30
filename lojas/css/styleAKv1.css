@@ -170,8 +170,6 @@ h6 {
   padding: 0;
 }
 
-
-
 #topbar .contact-info .bi-telephone-fill {
   padding-left: .73rem;
   margin-left: .5rem;
@@ -197,7 +195,11 @@ h6 {
   padding: 0;
   margin: 0;
 }
-
+.map-responsive {
+  margin-bottom: 30px;
+  border-radius:25px;
+  min-width: 90vw;
+}
 .sec-padding {
   padding-top: 1.1rem !important;
   padding-bottom: .9rem !important;
